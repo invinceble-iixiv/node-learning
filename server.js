@@ -57,6 +57,6 @@ mongoose.connect(dbUrl, {useNewUrlParser: true, useUnifiedTopology: true}).then(
     console.log("MongoDB conected..")
 }).catch(err => console.log(err))
 
-var server = http.listen(3000, () => {
+var server = http.listen(process.env.port, () => {
     console.log('server is listening on port', server.address().port)
 })
